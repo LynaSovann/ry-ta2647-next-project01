@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ry-ta2647-next-project01-certificate
+  namespace: ry-ta2647-next-project01
+spec:
+  secretName: ry-ta2647-next-project01-secret-tls
+  commonName: ry-ta2647-next-project01.assessify.org
+  dnsNames:
+  - ry-ta2647-next-project01.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
